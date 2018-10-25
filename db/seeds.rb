@@ -6,14 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+j = 0
+i = 0
+
 10.times do |index|
-	user = User.create!(id: index, first_name: "Nom#{index}", last_name: "Nom#{index}", email: "email#{index}@example.com")
+	user = User.create!(id: index, first_name: "prénom#{index}", last_name: "Nom#{index}", email: "email#{index}@example.com")
+	while j < 5
+		category = Category.create!(id: j,name: "cate#{index}")
+		j += 1
+	end
+	article = Article.create!(user_id: index, category_id: 0, title: "titre#{index}")
 end
 
-#10.times do |index|
-  #article = Article.create!(user_id: index, category_id: index, title: "Nom#{index}", content: "Nom#{index}")
-#end
 
-#5.times do |index|
-  #category = Category.create!(name: "Nom#{index}")
-#end
+
+while i < 15
+	if j < 9 
+		j = 1
+	end
+	like = Like.create!(article_id: j, user_id: j)
+	content = Content.create!(content: "commantaire text .#{j}", article_id: j)
+	i += 1
+	j += 1
+end
