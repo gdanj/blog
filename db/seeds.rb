@@ -21,7 +21,7 @@ end
 
 
 while i < 15
-	if j < 9 
+	if j > 9 
 		j = 1
 	end
 	like = Like.create!(article_id: j, user_id: j)
