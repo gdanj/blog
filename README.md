@@ -1,24 +1,20 @@
-# README
+# Blog BDD
+Blog BDD is an app where you can add Courses and Students
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Prerequisites
 
-Things you may want to cover:
+Ruby on your machine :)
 
-* Ruby version
+### Installing
 
-* System dependencies
+`git clone`  this repo
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## Built With
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Rails](https://rubyonrails.org/) - The web framework used
